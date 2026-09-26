@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sayed Kadhim Brief</title>
+<meta name="description" content="LAQTA internal creative brief and execution manual for Sayed Kadhim Restaurant, Al Diwaniyah.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;500;700;800;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- ============================================================
+     LAQTA × SAYED KADHIM — Internal Creative Brief
+     File map:
+       index.html  → content (edit copy here)
+       styles.css  → tokens + components
+       script.js   → nav, filters, checklists, loop, final filter
+     Notation used across the manual:
+       [TBC]        = waiting on client answer
+       ● PAID       = piece built as an ad creative from day one
+       colored dot  = content job (see chapter 08)
+     ============================================================ -->
+
+<a class="skip" href="#ch01">انتقل للمحتوى</a>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar" id="topbar">
+  <a class="brand" href="#top" aria-label="LAQTA — العودة للغلاف">
+    <span class="rec-dot" aria-hidden="true"></span>
+    <span class="brand-en en">LAQTA</span>
+    <span class="brand-ar">لقطة</span>
+  </a>
+  <div class="topbar-now" aria-live="polite">
+    <span class="en now-num" id="now-num">00</span>
+    <span class="now-title" id="now-title">الغلاف</span>
+  </div>
+  <div class="topbar-tc en" aria-hidden="true"><span class="tc-rec">REC</span><span id="tc">00:00:00:00</span></div>
+  <button class="index-btn" id="index-btn" type="button" aria-expanded="false" aria-controls="index-panel">
+    <span>الفهرس</span><span class="en" aria-hidden="true">16</span>
+  </button>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+</header>
+
+<!-- ============ CHAPTER RAIL (desktop) ============ -->
+<nav class="rail" id="rail" aria-label="الفصول">
+  <ol>
+    <li><a href="#ch01" data-ch="01"><span class="en">01</span><span class="rail-name">مرحبا، سيد كاظم</span></a></li>
+    <li><a href="#ch02" data-ch="02"><span class="en">02</span><span class="rail-name">الهدف</span></a></li>
+    <li><a href="#ch03" data-ch="03"><span class="en">03</span><span class="rail-name">شنو نعرف</span></a></li>
+    <li><a href="#ch04" data-ch="04"><span class="en">04</span><span class="rail-name">نحچي ويا منو؟</span></a></li>
+    <li><a href="#ch05" data-ch="05"><span class="en">05</span><span class="rail-name">ليش يختارونا؟</span></a></li>
+    <li><a href="#ch06" data-ch="06"><span class="en">06</span><span class="rail-name">شنو دا نبيع فعلاً؟</span></a></li>
+    <li><a href="#ch07" data-ch="07"><span class="en">07</span><span class="rail-name">نظام المحتوى</span></a></li>
+    <li><a href="#ch08" data-ch="08"><span class="en">08</span><span class="rail-name">شغل كل قطعة</span></a></li>
+    <li><a href="#ch09" data-ch="09"><span class="en">09</span><span class="rail-name">الكتابة</span></a></li>
+    <li><a href="#ch10" data-ch="10"><span class="en">10</span><span class="rail-name">التصوير والإنتاج</span></a></li>
+    <li><a href="#ch11" data-ch="11"><span class="en">11</span><span class="rail-name">التصميم والمونتاج</span></a></li>
+    <li><a href="#ch12" data-ch="12"><span class="en">12</span><span class="rail-name">الإعلانات</span></a></li>
+    <li><a href="#ch13" data-ch="13"><span class="en">13</span><span class="rail-name">قبل الشهر الأول</span></a></li>
+    <li><a href="#ch14" data-ch="14"><span class="en">14</span><span class="rail-name">منو يملك شنو؟</span></a></li>
+    <li><a href="#ch15" data-ch="15"><span class="en">15</span><span class="rail-name">الدورة</span></a></li>
+    <li><a href="#ch16" data-ch="16"><span class="en">16</span><span class="rail-name">الفلتر الأخير</span></a></li>
+  </ol>
+</nav>
+
+<!-- ============ INDEX OVERLAY ============ -->
+<div class="index-panel" id="index-panel" hidden>
+  <div class="index-inner">
+    <div class="index-head">
+      <span class="label en">INDEX — 16 CHAPTERS</span>
+      <button class="index-close" id="index-close" type="button">سد <span class="en" aria-hidden="true">×</span></button>
+    </div>
+    <ol class="toc toc--panel" id="toc-panel"></ol>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- =========================================================
+     COVER
+     ========================================================= -->
+<section class="cover" data-ch="00" data-title="الغلاف">
+  <div class="wrap">
+    <div class="cover-meta en">
+      <span>LAQTA — INTERNAL</span>
+      <span>FILE: SK_BRIEF_v1.0</span>
+      <span>CREATIVE BRIEF + EXECUTION MANUAL</span>
+      <span class="cover-conf ar">للفريق فقط — مو للعميل</span>
+    </div>
+
+    <div class="cover-title frame">
+      <span class="label en cover-kicker">CLIENT / <span class="ar">العميل</span></span>
+      <h1 class="cover-h1">سيد كاظم</h1>
+      <p class="cover-en en">SAYED KADHIM RESTAURANT — AL DIWANIYAH</p>
+    </div>
+
+    <div class="cover-bottom">
+      <p class="cover-lede">دليل داخلي لفريق لقطة. <strong>شنو نبيع، لمنو، وشلون نكتبه ونصوّره ونعلن عنه</strong> — حتى كل واحد يبدي شغله وهو فاهم المشروع، ويبقى عنده مساحة يبدع.</p>
+
+      <dl class="cover-facts">
+        <div><dt class="en">PACKAGE</dt><dd><span dir="ltr">9 Reels + 5 Posts</span><small>14 قطعة بالشهر</small></dd></div>
+        <div><dt class="en">PAID ADS</dt><dd>من اليوم الأول<small>المحتوى يتصمم للإعلان مو بس للنشر</small></dd></div>
+        <div><dt class="en">PRIORITY</dt><dd>Delivery<small>مع الحفاظ على سمعة الصالة</small></dd></div>
+        <div><dt class="en">STATUS</dt><dd>قبل الشهر الأول<small>بانتظار أجوبة العميل <span class="tag tag--tbc en">TBC</span></small></dd></div>
+      </dl>
+    </div>
+
+    <!-- Legend: the notation system used across the manual -->
+    <div class="legend" aria-label="دليل الرموز">
+      <span class="label en">HOW TO READ THIS</span>
+      <ul>
+        <li><span class="tag tag--tbc en">TBC</span> معلومة ناقصة — ننتظر العميل. ممنوع نخمّنها.</li>
+        <li><span class="paid-mark en"><i></i>PAID</span> قطعة مصممة كإعلان من البداية.</li>
+        <li><span class="job-dots" aria-hidden="true"><i class="j-demand"></i><i class="j-product"></i><i class="j-occasion"></i><i class="j-trust"></i><i class="j-experience"></i><i class="j-scale"></i><i class="j-conversion"></i><i class="j-performance"></i></span> لون = شغل القطعة (الفصل 08).</li>
+        <li><s class="nope">هيچ</s> ممنوع / نتجنبه.</li>
+      </ul>
+    </div>
+
+    <ol class="toc" id="toc">
+      <li><a href="#ch01"><span class="en">01</span><b>مرحبا، سيد كاظم</b><small class="en">HELLO, SAYED KADHIM</small></a></li>
+      <li><a href="#ch02"><span class="en">02</span><b>الهدف</b><small class="en">THE BUSINESS GOAL</small></a></li>
+      <li><a href="#ch03"><span class="en">03</span><b>شنو نعرف</b><small class="en">WHAT WE KNOW</small></a></li>
+      <li><a href="#ch04"><span class="en">04</span><b>نحچي ويا منو؟</b><small class="en">WHO ARE WE TALKING TO?</small></a></li>
+      <li><a href="#ch05"><span class="en">05</span><b>ليش يختارونا؟</b><small class="en">WHY WOULD THEY CHOOSE US?</small></a></li>
+      <li><a href="#ch06"><span class="en">06</span><b>شنو دا نبيع فعلاً؟</b><small class="en">WHAT ARE WE ACTUALLY SELLING?</small></a></li>
+      <li><a href="#ch07"><span class="en">07</span><b>نظام المحتوى</b><small class="en">THE CONTENT SYSTEM</small></a></li>
+      <li><a href="#ch08"><span class="en">08</span><b>شغل كل قطعة</b><small class="en">CONTENT JOBS</small></a></li>
+      <li><a href="#ch09"><span class="en">09</span><b>الكتابة</b><small class="en">COPY</small></a></li>
+      <li><a href="#ch10"><span class="en">10</span><b>التصوير والإنتاج</b><small class="en">VISUAL &amp; PRODUCTION</small></a></li>
+      <li><a href="#ch11"><span class="en">11</span><b>التصميم والمونتاج</b><small class="en">DESIGN &amp; EDITING</small></a></li>
+      <li><a href="#ch12"><span class="en">12</span><b>الإعلانات</b><small class="en">PAID CREATIVE</small></a></li>
+      <li><a href="#ch13"><span class="en">13</span><b>قبل الشهر الأول</b><small class="en">BEFORE MONTH ONE</small></a></li>
+      <li><a href="#ch14"><span class="en">14</span><b>منو يملك شنو؟</b><small class="en">WHO OWNS WHAT?</small></a></li>
+      <li><a href="#ch15"><span class="en">15</span><b>الدورة</b><small class="en">THE LOOP</small></a></li>
+      <li><a href="#ch16"><span class="en">16</span><b>الفلتر الأخير</b><small class="en">FINAL FILTER</small></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- =========================================================
+     01 — HELLO, SAYED KADHIM
+     ========================================================= -->
+<section class="chapter" id="ch01" data-ch="01" data-title="مرحبا، سيد كاظم">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.01</span><span>HELLO, SAYED KADHIM</span><span>TC 00:01:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">01</div>
+      <h2 class="ch-title">مرحبا، سيد كاظم</h2>
+      <p class="ch-lede">مطعم عراقي مستقر بالديوانية. الناس تعرفه، مطبخه قوي، وصالته كبيرة. شغلنا نخلّيه أول اسم يجي على بال الناس لما يجوعون — بالبيت، بالدوام، أو بعزيمة.</p>
+    </header>
+
+    <dl class="facts reveal">
+      <div class="fact">
+        <dt class="label en">LOCATION</dt>
+        <dd class="fact-big">الديوانية</dd>
+        <dd class="fact-note">يخدم كل مناطق الديوانية</dd>
+      </div>
+      <div class="fact">
+        <dt class="label en">ORDER CHANNELS</dt>
+        <dd class="fact-big fact-big--sm en">Phone · WhatsApp<br>Instagram · Messenger</dd>
+        <dd class="fact-note">أربع طرق للطلب — لازم الـ CTA يعرف أي وحدة يستخدم</dd>
+      </div>
+      <div class="fact">
+        <dt class="label en">CAPACITY</dt>
+        <dd class="fact-big">جاهز لأكثر</dd>
+        <dd class="fact-note">المطبخ والتشغيل يتحملون حجم طلبات أكبر</dd>
+      </div>
+      <div class="fact fact--context">
+        <dt class="label en">DAILY ORDERS — CONTEXT ONLY</dt>
+        <dd class="fact-big en">~80–90</dd>
+        <dd class="fact-note">طلب يومياً (تاريخياً). الطموح أكبر بهواية. <strong>هذا رقم سياق للفريق — ما ينكتب بأي content ولا نبني عليه وعود.</strong></dd>
+      </div>
+    </dl>
+
+    <div class="readers reveal">
+      <span class="label en">THIS MANUAL IS FOR</span>
+      <ul class="chips">
+        <li class="chip en">Copywriters</li>
+        <li class="chip en">Creative Director</li>
+        <li class="chip en">Art Direction / Design</li>
+        <li class="chip en">Photo / Video</li>
+        <li class="chip en">Editors / Motion</li>
+        <li class="chip en">Media Buying</li>
+        <li class="chip en">Management</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     02 — THE BUSINESS GOAL
+     ========================================================= -->
+<section class="chapter chapter--red" id="ch02" data-ch="02" data-title="الهدف">
+  <div class="wrap">
+    <header class="ch-head ch-head--statement">
+      <div class="ch-strip en"><span>CH.02</span><span>THE BUSINESS GOAL</span><span>TC 00:02:00:00</span></div>
+      <span class="label en">MAIN OBJECTIVE / <span class="ar">الهدف الرئيسي</span></span>
+      <h2 class="mega">طلبات <span class="en mega-en">Delivery</span> أكثر.<br><span class="mega-soft">وصالة اسمها أقوى.</span></h2>
+    </header>
+  </div>
+</section>
+
+<section class="chapter chapter--tight" data-ch="02" data-title="الهدف">
+  <div class="wrap">
+    <div class="priority reveal">
+      <article class="priority-card priority-card--primary">
+        <span class="label en">PRIMARY — 01</span>
+        <h3>الـ <span class="en">Delivery</span></h3>
+        <p>الأولوية التجارية. كل طلب يجي من <span dir="ltr">Phone / WhatsApp / Instagram / Messenger</span>.</p>
+        <p class="q">كل قطعة لازم تسأل: <strong>ليش واحد يطلب هذا هسه؟</strong></p>
+      </article>
+      <article class="priority-card">
+        <span class="label en">SECONDARY — 02</span>
+        <h3>سمعة الصالة</h3>
+        <p>العوائل، التجمعات، الحجوزات، والعشا. ما نضحّي بالصالة حتى نبيع <span class="en">delivery</span> — الثنين يقوّون بعض.</p>
+        <p class="q">السؤال هنا: <strong>ليش أجيب العائلة لهنا؟</strong></p>
+      </article>
+    </div>
+
+    <!-- Diagnosis: Problem → Insight → Direction → Execution -->
+    <ol class="pide reveal" aria-label="التشخيص">
+      <li>
+        <span class="label en">PROBLEM</span>
+        <b>المشكلة</b>
+        <p>الطاقة التشغيلية أكبر من الطلب الحالي. المطعم جاهز يستقبل أكثر.</p>
+      </li>
+      <li>
+        <span class="label en">INSIGHT — WORKING HYPOTHESIS</span>
+        <b>السبب</b>
+        <p>الناس تعرف المطعم، بس مو دائماً هو الجواب الأول لسؤال <q>شناكل اليوم؟</q></p>
+      </li>
+      <li>
+        <span class="label en">DIRECTION</span>
+        <b>الاتجاه</b>
+        <p>نربط سيد كاظم بمواقف الأكل اليومية: الغدا، لمّة العائلة، العزايم، والطلب للبيت.</p>
+      </li>
+      <li>
+        <span class="label en">EXECUTION</span>
+        <b>التنفيذ</b>
+        <p><span dir="ltr">9 Reels + 5 Posts</span> بالشهر + <span class="en">Paid Ads</span> من اليوم الأول، ونتعلم من الأرقام كل شهر.</p>
+      </li>
+    </ol>
+
+    <aside class="note note--warn reveal">
+      <span class="label en">GUARDRAIL</span>
+      <p>العميل طموحه ينمو فوق الـ <span dir="ltr">80–90</span> طلب بهواية. نتعامل ويا هالطموح كـ<strong>سياق يوجّه الجهد</strong> — مو كرقم نوعد بيه، ولا نكتبه بإعلان، ولا نحطه بعرض.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- =========================================================
+     03 — WHAT WE KNOW
+     ========================================================= -->
+<section class="chapter" id="ch03" data-ch="03" data-title="شنو نعرف">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.03</span><span>WHAT WE KNOW</span><span>TC 00:03:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">03</div>
+      <h2 class="ch-title">شنو نعرف</h2>
+      <p class="ch-lede">ثمان نقاط قوة. بعضها <strong>تنقال</strong>، وأغلبها لازم <strong>تنشاف</strong>. الكاميرا تثبت أقوى من الكابشن.</p>
+    </header>
+
+    <div class="strengths reveal">
+      <article class="strength">
+        <header><span class="en idx">S1</span><span class="label en">IRAQI FOOD</span><span class="mode en">SHOW</span></header>
+        <h3>الأكل العراقي</h3>
+        <p>الأساس. كل شي يرجعله. أكل عراقي وشرقي الناس تعرفه وتثق بيه.</p>
+        <p class="use"><span class="en">USE →</span> كل شهر بي <span class="en">Hero dish</span> عراقي واضح.</p>
+      </article>
+      <article class="strength">
+        <header><span class="en idx">S2</span><span class="label en">QUANTITY</span><span class="mode en">SHOW</span></header>
+        <h3>الكمية</h3>
+        <p class="quote">طلبت أكل. وصلك أكل.</p>
+        <p class="use"><span class="en">USE →</span> صينية مليانة، غرفة تمن، طاولة تتعبى. كرم — مو رخص ولا مبالغة.</p>
+      </article>
+      <article class="strength">
+        <header><span class="en idx">S3</span><span class="label en">SERVICE</span><span class="mode en">SHOW</span></header>
+        <h3>الخدمة</h3>
+        <p>تجربة الزبون والخدمة من نقاط التفوق الحقيقية.</p>
+        <p class="use"><span class="en">USE →</span> الـ <span class="en">captains</span> والكرسونات: الترحيب، سرعة التقديم، الاهتمام.</p>
+      </article>
+      <article class="strength">
+        <header><span class="en idx">S4</span><span class="label en">CLEANLINESS</span><span class="mode en">SHOW</span></header>
+        <h3>النظافة</h3>
+        <p>عامل ثقة مهم. تنشاف أكثر مما تنقال.</p>
+        <p class="use"><span class="en">USE →</span> مطبخ مرتب، ستيل يلمع، كفوف، تغليف محكم. بدون ما نكرر <q>نظيف</q> بالكابشن.</p>
+      </article>
+      <article class="strength strength--hero">
+        <header><span class="en idx">S5</span><span class="label en">FRESH HOT BREAD</span><span class="mode en">SHOW + SOUND</span></header>
+        <h3>الخبز الحار</h3>
+        <p>أقوى أصل حسّي عدنا. يتكرر بصرياً كتوقيع للبراند.</p>
+        <p class="use"><span class="en">USE →</span> البخار، التنور، لحظة الانكسار، صوت القرمشة.</p>
+      </article>
+      <article class="strength">
+        <header><span class="en idx">S6</span><span class="label en">VARIETY</span><span class="mode en">SHOW + SAY</span></header>
+        <h3>التنوع</h3>
+        <p>المطعم أكثر بهواية من كباب.</p>
+        <p class="use"><span class="en">USE →</span> كل فرد بالعائلة يلگه شي. <span class="en">Carousel</span> منيو + <span class="en">Reels</span> لكل صنف.</p>
+      </article>
+      <article class="strength">
+        <header><span class="en idx">S7</span><span class="label en">FAMILIES</span><span class="mode en">SHOW</span></header>
+        <h3>العوائل</h3>
+        <p>مكان مناسب للعوائل. أكل العائلة كلها تقبله.</p>
+        <p class="use"><span class="en">USE →</span> طاولات عوائل، صواني مشتركة، أجواء مريحة.</p>
+      </article>
+      <article class="strength">
+        <header><span class="en idx">S8</span><span class="label en">GATHERINGS &amp; CAPACITY</span><span class="mode en">SHOW</span></header>
+        <h3>التجمعات والاستيعاب</h3>
+        <p>يستقبل تجمعات وعزايم ومجاميع كبيرة. من الصالات الكبيرة بالديوانية.</p>
+        <p class="use"><span class="en">USE →</span> <span class="en">Wide shots</span> وطاولات مجهزة. <s class="nope">أكبر مطعم</s> ما ننكتب إلا إذا تأكدنا.</p>
+      </article>
+    </div>
+
+    <div class="menu-strip reveal">
+      <div class="menu-strip-head">
+        <span class="label en">MENU CATEGORIES</span>
+        <span class="tag tag--tbc en">PRIORITY TBC</span>
+      </div>
+      <ul>
+        <li><b>كباب</b><span class="en">Kebab</span></li>
+        <li><b>قوزي</b><span class="en">Qouzi</span></li>
+        <li><b>سمك</b><span class="en">Fish</span></li>
+        <li><b>دولمة</b><span class="en">Dolma</span></li>
+        <li><b>دجاج</b><span class="en">Chicken</span></li>
+        <li><b>كنتاكي</b><span class="en">Fried Chicken</span></li>
+        <li><b>أطباق عراقية وشرقية ثانية</b><span class="en">Other</span></li>
+      </ul>
+      <p class="menu-strip-note">ترتيب الأولوية ينقفل ويا العميل (الفصل 13). لحد ذاك الوقت ما نختار <span class="en">Hero dish</span> على كيفنا.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     04 — WHO ARE WE TALKING TO?
+     ========================================================= -->
+<section class="chapter chapter--dark chapter--statement-only" data-ch="04" data-title="نحچي ويا منو؟" id="ch04">
+  <div class="wrap">
+    <div class="ch-strip en"><span>CH.04</span><span>WHO ARE WE TALKING TO?</span><span>TC 00:04:00:00</span></div>
+    <p class="mega mega--dark">ما نسوّق أكل.<br><span class="mega-accent">نسوّق مواقف</span> يحتاج بيها الناس أكل.</p>
+  </div>
+</section>
+
+<section class="chapter chapter--tight" data-ch="04" data-title="نحچي ويا منو؟">
+  <div class="wrap">
+    <header class="ch-head ch-head--compact">
+      <div class="ch-num en" aria-hidden="true">04</div>
+      <h2 class="ch-title">نحچي ويا منو؟</h2>
+      <p class="ch-lede">نفكر بالمناسبة قبل الطبق. هاي خريطة المواقف اللي نريد نملكها خلال اليوم.</p>
+    </header>
+
+    <!-- Occasion map: dayparts × occasions -->
+    <figure class="occasion-map reveal" aria-label="خريطة المناسبات خلال اليوم">
+      <div class="om-scroll">
+        <div class="om-grid">
+          <div class="om-corner label en">OCCASION ↓ / DAYPART →</div>
+          <div class="om-col">الضحى</div>
+          <div class="om-col">الظهر</div>
+          <div class="om-col">العصر</div>
+          <div class="om-col">المغرب</div>
+          <div class="om-col">الليل</div>
+
+          <div class="om-row"><b>الغدا</b><span class="en">LUNCH</span></div>
+          <div class="om-bar om-bar--lunch" style="grid-column: 3 / span 2"><span>أكبر فرصة — دوائر، شركات، عوائل، مجاميع</span></div>
+
+          <div class="om-row"><b>العشا</b><span class="en">DINNER</span></div>
+          <div class="om-bar om-bar--dinner" style="grid-column: 5 / span 2"><span>صالة، عائلة، أصدقاء، طلعة المسا</span></div>
+
+          <div class="om-row"><b>التوصيل</b><span class="en">DELIVERY</span></div>
+          <div class="om-bar om-bar--delivery" style="grid-column: 2 / span 5"><span>طول اليوم — الأولوية التجارية</span></div>
+
+          <div class="om-row"><b>لمّة العائلة</b><span class="en">FAMILY</span></div>
+          <div class="om-bar om-bar--family" style="grid-column: 3 / span 4"><span>طلب لأكثر من شخص — غدا أو عشا</span></div>
+
+          <div class="om-row"><b>العزايم والمناسبات</b><span class="en">EVENTS</span></div>
+          <div class="om-bar om-bar--events" style="grid-column: 3 / span 4"><span>نحتاج نستكشفها ويا العميل <em class="tag tag--tbc en">TBC</em></span></div>
+        </div>
+      </div>
+      <figcaption class="caption">أوقات تقريبية لتوضيح الفكرة. أي ساعات وأيام تحتاج طلب أكثر؟ سؤال للعميل (الفصل 13).</figcaption>
+    </figure>
+
+    <div class="occasions reveal">
+      <article class="occasion">
+        <span class="label en">LUNCH</span>
+        <h3>الغدا</h3>
+        <p class="scene">الساعة وحدة بالدوام. الكل جوعان، ومحد متفق شناكل.</p>
+        <ul class="mini"><li>موظفين ودوائر</li><li>عوائل ومجاميع</li><li>عزايم واجتماعات</li><li>تجمعات الجامعة</li></ul>
+      </article>
+      <article class="occasion">
+        <span class="label en">DINNER</span>
+        <h3>العشا</h3>
+        <p class="scene">طلعة المسا ويا العائلة أو الربع، والطاولة تتعبى.</p>
+        <ul class="mini"><li>أجواء المطعم</li><li>أكل مشترك</li><li>تجربة الصالة</li></ul>
+      </article>
+      <article class="occasion occasion--key">
+        <span class="label en">DELIVERY</span>
+        <h3>التوصيل</h3>
+        <p class="scene">محد يريد يطبخ اليوم. الأكل لازم يوصل حار.</p>
+        <ul class="mini"><li>السؤال الدائم: ليش يطلب هذا <strong>هسه</strong>؟</li></ul>
+      </article>
+      <article class="occasion">
+        <span class="label en">FAMILY GATHERINGS</span>
+        <h3>لمّة العائلة</h3>
+        <p class="scene">العائلة جاية، وفجأة الغدا صار مسؤوليتك.</p>
+        <ul class="mini"><li>صواني مشتركة</li><li>كمية وتنوع</li><li>راحة — أكل لكذا شخص</li></ul>
+      </article>
+      <article class="occasion">
+        <span class="label en">INVITATIONS &amp; EVENTS</span>
+        <h3>العزايم والمناسبات</h3>
+        <p class="scene">عزيمة كبيرة، وتحتاج جهة تتحمل الحجم.</p>
+        <ul class="mini"><li>فئة نحتاج نفهمها أكثر ويا العميل <span class="tag tag--tbc en">TBC</span></li></ul>
+      </article>
+    </div>
+
+    <div class="mindset reveal">
+      <div class="mindset-want">
+        <span class="label en">CUSTOMER MINDSET — WHAT THEY WANT</span>
+        <p class="mindset-lede">ناس مو دا تدوّر على مفهوم مطعم معقد. يريدون:</p>
+        <ol class="want-list">
+          <li>أكل زين</li>
+          <li>أكل يعرفوه</li>
+          <li>أكل يكفي</li>
+          <li>خدمة يعتمدون عليها</li>
+          <li>تحضير نظيف</li>
+          <li>طلب سهل</li>
+          <li>شي العائلة تقبله</li>
+          <li>مكان يستوعبهم</li>
+          <li>أكل يليق بعزيمة</li>
+        </ol>
+      </div>
+      <div class="mindset-tone">
+        <span class="label en">SO WE SOUND</span>
+        <ul class="tone-words">
+          <li>واضح</li><li>إنساني</li><li>عراقي</li><li>واثق</li><li>مألوف</li><li>دافي</li><li>مباشر</li>
+        </ul>
+        <p class="caption">لا تفلسفون البراند. الناس تريد أكل، مو محاضرة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     05 — WHY WOULD THEY CHOOSE US?
+     ========================================================= -->
+<section class="chapter" id="ch05" data-ch="05" data-title="ليش يختارونا؟">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.05</span><span>WHY WOULD THEY CHOOSE US?</span><span>TC 00:05:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">05</div>
+      <h2 class="ch-title">ليش يختارونا؟</h2>
+      <p class="ch-lede">سبع أسئلة. <strong>كل قطعة محتوى لازم تجاوب واحد منها على الأقل.</strong> إذا ما جاوبت ولا واحد — راجعوا الفكرة.</p>
+    </header>
+
+    <ol class="whys reveal">
+      <li>
+        <span class="whys-n en">?1</span>
+        <h3>ليش سيد كاظم؟</h3>
+        <p>اسم معروف، أكل عراقي، خدمة، نظافة، ومكان يستوعب.</p>
+        <span class="whys-jobs"><i class="j-trust"></i><i class="j-experience"></i><span class="en">TRUST · EXPERIENCE</span></span>
+      </li>
+      <li>
+        <span class="whys-n en">?2</span>
+        <h3>ليش هالأكلة؟</h3>
+        <p>الملمس، الحرارة، الكمية. خلّي الصورة تجاوب قبل الكلام.</p>
+        <span class="whys-jobs"><i class="j-demand"></i><i class="j-product"></i><span class="en">DEMAND · PRODUCT</span></span>
+      </li>
+      <li>
+        <span class="whys-n en">?3</span>
+        <h3>ليش اليوم؟</h3>
+        <p>التوقيت: الغدا، نهاية الأسبوع، الجو، عزيمة قريبة — والعرض إذا انوافق عليه.</p>
+        <span class="whys-jobs"><i class="j-occasion"></i><i class="j-conversion"></i><span class="en">OCCASION · CONVERSION</span></span>
+      </li>
+      <li>
+        <span class="whys-n en">?4</span>
+        <h3>ليش هالمناسبة؟</h3>
+        <p>نربط الطبق بموقف حقيقي يعيشه الزبون.</p>
+        <span class="whys-jobs"><i class="j-occasion"></i><i class="j-scale"></i><span class="en">OCCASION · SCALE</span></span>
+      </li>
+      <li>
+        <span class="whys-n en">?5</span>
+        <h3>ليش تطلب بدل ما تطبخ؟</h3>
+        <p>الوقت، التعب، الكمية، التنوع. الغدا ينحل بمكالمة.</p>
+        <span class="whys-jobs"><i class="j-conversion"></i><i class="j-demand"></i><span class="en">CONVERSION · DEMAND</span></span>
+      </li>
+      <li>
+        <span class="whys-n en">?6</span>
+        <h3>ليش تجيب العائلة لهنا؟</h3>
+        <p>مكان واسع، نظيف، خدمة محترمة، وأكل يرضي الكل.</p>
+        <span class="whys-jobs"><i class="j-experience"></i><i class="j-scale"></i><span class="en">EXPERIENCE · SCALE</span></span>
+      </li>
+      <li>
+        <span class="whys-n en">?7</span>
+        <h3>ليش تثق بهذا المطعم؟</h3>
+        <p>مطبخ مفتوح للكاميرا، ناس حقيقيين، وثبات بالجودة.</p>
+        <span class="whys-jobs"><i class="j-trust"></i><span class="en">TRUST</span></span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- =========================================================
+     06 — WHAT ARE WE ACTUALLY SELLING?
+     ========================================================= -->
+<section class="chapter chapter--dark" id="ch06" data-ch="06" data-title="شنو دا نبيع فعلاً؟">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.06</span><span>WHAT ARE WE ACTUALLY SELLING?</span><span>TC 00:06:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">06</div>
+      <h2 class="ch-title">شنو دا نبيع فعلاً؟</h2>
+      <p class="ch-lede">الأكل هو المنتج. بس اللي يدفع عليه الزبون أكبر من الصحن.</p>
+    </header>
+
+    <!-- The equation -->
+    <div class="equation reveal" role="group" aria-label="المعادلة">
+      <div class="eq-term eq-term--food">
+        <span class="label en">FOOD</span>
+        <b>الأكل</b>
+      </div>
+      <span class="eq-op en" aria-hidden="true">+</span>
+      <div class="eq-term">
+        <span class="label en">CONVENIENCE</span>
+        <b>الراحة</b>
+        <p>الغدا انحل بمكالمة.</p>
+      </div>
+      <span class="eq-op en" aria-hidden="true">+</span>
+      <div class="eq-term">
+        <span class="label en">QUANTITY</span>
+        <b>الكمية</b>
+        <p>طلبت أكل. وصلك أكل.</p>
+      </div>
+      <span class="eq-op en" aria-hidden="true">+</span>
+      <div class="eq-term">
+        <span class="label en">GATHERING</span>
+        <b>اللمّة</b>
+        <p>العزيمة ما صارت همّك.</p>
+      </div>
+      <span class="eq-op en" aria-hidden="true">+</span>
+      <div class="eq-term">
+        <span class="label en">TRUST</span>
+        <b>الثقة</b>
+        <p>تعرف شنو دا تاكل ومنين.</p>
+      </div>
+      <span class="eq-op en" aria-hidden="true">+</span>
+      <div class="eq-term">
+        <span class="label en">EXPERIENCE</span>
+        <b>التجربة</b>
+        <p>طلعة تستاهل.</p>
+      </div>
+      <span class="eq-op eq-op--eq en" aria-hidden="true">=</span>
+      <div class="eq-result">
+        <span class="label en">THE PRODUCT</span>
+        <b>سيد كاظم</b>
+      </div>
+    </div>
+
+    <p class="pull reveal">كل قطعة تبيع <strong>الأكل</strong> + وحدة من هاي القيم على الأقل. صحن بدون قيمة = صورة أكل وبس.</p>
+  </div>
+</section>
+
+<!-- =========================================================
+     07 — THE CONTENT SYSTEM
+     ========================================================= -->
+<section class="chapter" id="ch07" data-ch="07" data-title="نظام المحتوى">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.07</span><span>THE CONTENT SYSTEM</span><span>TC 00:07:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">07</div>
+      <h2 class="ch-title"><span dir="ltr">9 Reels + 5 Posts</span></h2>
+      <p class="ch-lede">14 قطعة بالشهر. <strong>كل وحدة إلها شغل.</strong> نبني نظام متوازن يخدم الـ organic والإعلان سوا — مو 14 قطعة متفرقة.</p>
+    </header>
+
+    <div class="formats reveal">
+      <article class="format">
+        <div class="format-head"><span class="format-count en">9</span><div><b class="en">REELS</b><span>الفيديو</span></div></div>
+        <p>نستخدمه للي يحتاج حركة وصوت وإحساس:</p>
+        <ul class="mini mini--cols">
+          <li>شهية الأكل</li><li>التحضير</li><li>المطبخ</li><li>تفاعل الناس</li><li>حجم المطعم</li><li>مواقف الزبون</li><li>التوصيل</li><li>قصص المنتج</li><li><span class="en">Paid creatives</span></li>
+        </ul>
+      </article>
+      <article class="format">
+        <div class="format-head"><span class="format-count en">5</span><div><b class="en">POSTS</b><span>ثابت / <span class="en">Carousel</span></span></div></div>
+        <p>نستخدمه للي يحتاج قراية أبطأ:</p>
+        <ul class="mini mini--cols">
+          <li>تواصل قوي عن المنتج</li><li>العروض</li><li>تعريف بالمنيو</li><li>العوائل والمجاميع</li><li>مميزات المطعم</li><li>بناء الهوية البصرية</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Monthly grid: working hypothesis, filterable by job -->
+    <div class="system reveal">
+      <div class="system-head">
+        <div>
+          <span class="label en">MONTH-ONE GRID — WORKING HYPOTHESIS</span>
+          <p class="system-note"><strong>هذا مو توزيع نهائي.</strong> ينقفل بعد ما نعرف الـ <span class="en">Hero dishes</span> والأهداف التجارية. الفكرة توضّح التوازن.</p>
+        </div>
+        <div class="filters" role="toolbar" aria-label="فلترة حسب الشغل">
+          <button type="button" class="filter is-on" data-filter="all" aria-pressed="true">الكل</button>
+          <button type="button" class="filter" data-filter="paid" aria-pressed="false"><span class="paid-mark en"><i></i>PAID</span></button>
+          <button type="button" class="filter" data-filter="demand" aria-pressed="false"><i class="dot j-demand"></i><span class="en">DEMAND</span></button>
+          <button type="button" class="filter" data-filter="product" aria-pressed="false"><i class="dot j-product"></i><span class="en">PRODUCT</span></button>
+          <button type="button" class="filter" data-filter="occasion" aria-pressed="false"><i class="dot j-occasion"></i><span class="en">OCCASION</span></button>
+          <button type="button" class="filter" data-filter="trust" aria-pressed="false"><i class="dot j-trust"></i><span class="en">TRUST</span></button>
+          <button type="button" class="filter" data-filter="experience" aria-pressed="false"><i class="dot j-experience"></i><span class="en">EXPERIENCE</span></button>
+          <button type="button" class="filter" data-filter="scale" aria-pressed="false"><i class="dot j-scale"></i><span class="en">SCALE</span></button>
+          <button type="button" class="filter" data-filter="conversion" aria-pressed="false"><i class="dot j-conversion"></i><span class="en">CONVERSION</span></button>
+          <button type="button" class="filter" data-filter="performance" aria-pressed="false"><i class="dot j-performance"></i><span class="en">PERFORMANCE</span></button>
+        </div>
+      </div>
+
+      <div class="tiles-wrap">
+        <div class="tiles-group">
+          <span class="label en">REELS — 9:16</span>
+          <ul class="tiles tiles--reels" id="tiles-reels">
+            <li class="tile tile--reel j-demand" data-job="demand" data-paid="1"><span class="tile-id en">R01</span><span class="tile-job en">DEMAND</span><span class="tile-idea">الفحم، الشوي، والخبز الحار. شهية خالصة.</span><span class="paid-mark en"><i></i>PAID</span></li>
+            <li class="tile tile--reel j-product" data-job="product"><span class="tile-id en">R02</span><span class="tile-job en">PRODUCT</span><span class="tile-idea">قصة الـ <span class="en">Hero dish</span> من التحضير للطاولة.</span><span class="tag tag--tbc en">DISH TBC</span></li>
+            <li class="tile tile--reel j-occasion" data-job="occasion" data-paid="1"><span class="tile-id en">R03</span><span class="tile-job en">OCCASION</span><span class="tile-idea">غدا الدوام: محد متفق شناكل.</span><span class="paid-mark en"><i></i>PAID</span></li>
+            <li class="tile tile--reel j-trust" data-job="trust"><span class="tile-id en">R04</span><span class="tile-job en">TRUST</span><span class="tile-idea">المطبخ من جوّه: نظافة، تحضير، إيدين.</span></li>
+            <li class="tile tile--reel j-experience" data-job="experience"><span class="tile-id en">R05</span><span class="tile-job en">EXPERIENCE</span><span class="tile-idea">ليلة بالصالة: الـ <span class="en">captain</span> والطاولة تتعبى.</span></li>
+            <li class="tile tile--reel j-scale" data-job="scale"><span class="tile-id en">R06</span><span class="tile-job en">SCALE</span><span class="tile-idea">تجهيز عزيمة كبيرة: الحجم ينشاف.</span></li>
+            <li class="tile tile--reel j-conversion" data-job="conversion" data-paid="1"><span class="tile-id en">R07</span><span class="tile-job en">CONVERSION</span><span class="tile-idea">الطلب يطلع من المطبخ ويوصل حار للباب.</span><span class="paid-mark en"><i></i>PAID</span></li>
+            <li class="tile tile--reel j-product" data-job="product"><span class="tile-id en">R08</span><span class="tile-job en">PRODUCT</span><span class="tile-idea">الخبز: من التنور للطاولة.</span></li>
+            <li class="tile tile--reel j-performance" data-job="performance" data-paid="1"><span class="tile-id en">R09</span><span class="tile-job en">PERFORMANCE</span><span class="tile-idea">نفس الطبق، <span class="en">angle</span> ثاني — اختبار.</span><span class="paid-mark en"><i></i>PAID</span></li>
+          </ul>
+        </div>
+        <div class="tiles-group">
+          <span class="label en">POSTS — 4:5</span>
+          <ul class="tiles tiles--posts" id="tiles-posts">
+            <li class="tile tile--post j-product" data-job="product"><span class="tile-id en">P01</span><span class="tile-job en">PRODUCT</span><span class="tile-idea">الـ <span class="en">Hero dish</span> — صورة تسيطر عالمساحة.</span><span class="tag tag--tbc en">DISH TBC</span></li>
+            <li class="tile tile--post j-product" data-job="product"><span class="tile-id en">P02</span><span class="tile-job en">PRODUCT</span><span class="tile-idea"><span class="en">Carousel</span>: المنيو أكثر من كباب.</span></li>
+            <li class="tile tile--post j-occasion" data-job="occasion" data-paid="1"><span class="tile-id en">P03</span><span class="tile-job en">OCCASION</span><span class="tile-idea">وجبة العائلة / المجموعة.</span><span class="paid-mark en"><i></i>PAID</span></li>
+            <li class="tile tile--post j-conversion" data-job="conversion" data-paid="1"><span class="tile-id en">P04</span><span class="tile-job en">CONVERSION</span><span class="tile-idea">عرض (إذا انوافق) — أو شلون تطلب.</span><span class="paid-mark en"><i></i>PAID</span></li>
+            <li class="tile tile--post j-scale" data-job="scale"><span class="tile-id en">P05</span><span class="tile-job en">SCALE</span><span class="tile-idea">الصالة تستقبل عزايمكم.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="caption" id="tiles-count" aria-live="polite">14 / 14 قطعة ظاهرة</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     08 — CONTENT JOBS
+     ========================================================= -->
+<section class="chapter chapter--white" id="ch08" data-ch="08" data-title="شغل كل قطعة">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.08</span><span>CONTENT JOBS</span><span>TC 00:08:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">08</div>
+      <h2 class="ch-title">شغل كل قطعة</h2>
+      <p class="ch-lede">لا تنتجون <s class="nope">صورة أكل + جملة عراقية عشوائية + رقم تلفون</s>. هاي أدوات تفكير، مو صناديق — قطعة وحدة ممكن تسوي شغلتين.</p>
+    </header>
+
+    <div class="jobs reveal">
+      <article class="job j-demand">
+        <header><i class="dot"></i><span class="en">DEMAND</span></header>
+        <h3>الشهية</h3>
+        <p>يخلّي الناس تجوع هسه.</p>
+        <dl><dt>شكله</dt><dd><span class="en">Macro</span>، بخار، فحم، صوت الشوي.</dd><dt>يجاوب</dt><dd>ليش هالأكلة؟</dd></dl>
+      </article>
+      <article class="job j-product">
+        <header><i class="dot"></i><span class="en">PRODUCT</span></header>
+        <h3>المنتج</h3>
+        <p>يوضّح شنو نبيع بالضبط.</p>
+        <dl><dt>شكله</dt><dd>الطبق، مكوناته، حجمه، وشلون يوصل.</dd><dt>يجاوب</dt><dd>ليش هالأكلة؟</dd></dl>
+      </article>
+      <article class="job j-occasion">
+        <header><i class="dot"></i><span class="en">OCCASION</span></header>
+        <h3>المناسبة</h3>
+        <p>يربطنا بلحظة بحياة الزبون.</p>
+        <dl><dt>شكله</dt><dd>سيناريو: الدوام، العزيمة، الجمعة.</dd><dt>يجاوب</dt><dd>ليش اليوم؟ ليش هالمناسبة؟</dd></dl>
+      </article>
+      <article class="job j-trust">
+        <header><i class="dot"></i><span class="en">TRUST</span></header>
+        <h3>الثقة</h3>
+        <p>نظافة، تحضير، خدمة، ثبات.</p>
+        <dl><dt>شكله</dt><dd>المطبخ، الإيدين، التغليف، الفريق.</dd><dt>يجاوب</dt><dd>ليش نثق بيهم؟</dd></dl>
+      </article>
+      <article class="job j-experience">
+        <header><i class="dot"></i><span class="en">EXPERIENCE</span></header>
+        <h3>التجربة</h3>
+        <p>شلون الإحساس داخل سيد كاظم.</p>
+        <dl><dt>شكله</dt><dd>الصالة، الـ <span class="en">captains</span>، طاولة تتعبى.</dd><dt>يجاوب</dt><dd>ليش نجيب العائلة؟</dd></dl>
+      </article>
+      <article class="job j-scale">
+        <header><i class="dot"></i><span class="en">SCALE</span></header>
+        <h3>الحجم</h3>
+        <p>يستوعب عوائل ومجاميع ومناسبات.</p>
+        <dl><dt>شكله</dt><dd><span class="en">Wide shots</span>، طاولات مجهزة، صواني.</dd><dt>يجاوب</dt><dd>ليش هالمناسبة؟</dd></dl>
+      </article>
+      <article class="job j-conversion">
+        <header><i class="dot"></i><span class="en">CONVERSION</span></header>
+        <h3>التحويل</h3>
+        <p>سبب واضح + طريق واضح للطلب.</p>
+        <dl><dt>شكله</dt><dd>طبق + فائدة + <span class="en">CTA</span> + قناة الطلب.</dd><dt>يجاوب</dt><dd>ليش تطلب بدل ما تطبخ؟</dd></dl>
+      </article>
+      <article class="job j-performance">
+        <header><i class="dot"></i><span class="en">PERFORMANCE CREATIVE</span></header>
+        <h3>الإعلان</h3>
+        <p>ينصمم للـ <span class="en">Paid</span> من أول فكرة.</p>
+        <dl><dt>شكله</dt><dd><span class="en">Hook</span> بأول ثانية، منتج واضح، <span class="en">angle</span> واحد، <span class="en">CTA</span>.</dd><dt>يجاوب</dt><dd>حسب الـ <span class="en">angle</span>.</dd></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     09 — COPY
+     ========================================================= -->
+<section class="chapter" id="ch09" data-ch="09" data-title="الكتابة">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.09</span><span>COPY</span><span>TC 00:09:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">09</div>
+      <h2 class="ch-title">شلون نحچي، وشلون نفكر</h2>
+      <p class="ch-lede">الكاتب ما يبدي بـ<q>خلّي أكتب كابشن</q>. يبدي بست أسئلة، وبعدها يكتب.</p>
+    </header>
+
+    <ol class="steps reveal" aria-label="قبل الكتابة">
+      <li><span class="en">01</span>منو دا نحچي وياه؟</li>
+      <li><span class="en">02</span>بأي موقف هو هسه؟</li>
+      <li><span class="en">03</span>شنو يريد؟</li>
+      <li><span class="en">04</span>شنو المشكلة اللي يحلها سيد كاظم؟</li>
+      <li><span class="en">05</span>أي أكلة دا ندفع؟</li>
+      <li><span class="en">06</span>شنو يسوي بعد ما يشوف؟</li>
+    </ol>
+
+    <div class="rewrite reveal">
+      <span class="label en">THINK IN SCENARIOS — BEFORE / AFTER</span>
+      <div class="rw">
+        <p class="rw-before"><span class="en">✕</span> جرب أكلنا العراقي اللذيذ.</p>
+        <p class="rw-after"><span class="en">→</span> أنت بالدوام. الغدا قرّب. ومحد متفق شناكل.</p>
+      </div>
+      <div class="rw">
+        <p class="rw-before"><span class="en">✕</span> عدنا وجبات للعوائل.</p>
+        <p class="rw-after"><span class="en">→</span> العائلة جاية، وفجأة الغدا صار مسؤوليتك.</p>
+      </div>
+      <div class="rw">
+        <p class="rw-before"><span class="en">✕</span> عدنا خبز حار.</p>
+        <p class="rw-after"><span class="en">→</span> الخبز يوصل للطاولة وبخاره طالع. <small>(هنا الصورة تحچي، والكاتب يسكت.)</small></p>
+      </div>
+    </div>
+
+    <div class="dodont reveal">
+      <div class="dd dd--dont">
+        <span class="label en">AVOID</span>
+        <ul>
+          <li><s>نكت مفروضة</s></li>
+          <li><s>لهجة زايدة عن اللزوم</s></li>
+          <li><s>أطيب طعم</s></li>
+          <li><s>تجربة لا تُنسى</s></li>
+          <li><s>عالم من النكهات</s></li>
+          <li><s>أفضل، الأول، رقم واحد</s></li>
+          <li><s>أصيل… بكل جملة</s></li>
+          <li><s>حماس بلا معنى</s></li>
+          <li><s>عربي إعلاني مصطنع</s></li>
+        </ul>
+      </div>
+      <div class="dd dd--do">
+        <span class="label en">PREFER</span>
+        <ul>
+          <li>مواقف حقيقية</li>
+          <li>ملاحظات من الحياة</li>
+          <li>تفاصيل محددة</li>
+          <li>شهية</li>
+          <li>سلوك بشري مألوف</li>
+          <li>فائدة مباشرة</li>
+          <li><span class="en">Hooks</span> بسيطة</li>
+          <li><span class="en">CTA</span> قوي وين ما يلزم</li>
+        </ul>
+        <p class="caption">اللغة: عراقي حقيقي، مثل ما الناس تحچي. مو <q>عراقي الإعلانات</q>.</p>
+      </div>
+    </div>
+
+    <!-- CTA logic -->
+    <div class="cta-logic reveal">
+      <div class="cta-logic-head">
+        <span class="label en">CTA LOGIC</span>
+        <p>الـ <span class="en">CTA</span> قرار الكاتب، ويتغيّر حسب القطعة. <strong>الشرط الوحيد: يكون مقصود.</strong></p>
+      </div>
+      <div class="table-scroll">
+        <table class="table">
+          <thead><tr><th scope="col">الفعل</th><th scope="col"><span class="en">ACTION</span></th><th scope="col">يناسب لما القطعة…</th></tr></thead>
+          <tbody>
+            <tr><td><b>اطلب هسه</b></td><td class="en">Order now</td><td>تبني شهية أو تحوّل مباشرة <span class="job-dots"><i class="j-demand"></i><i class="j-conversion"></i></span></td></tr>
+            <tr><td><b>دزّلنا رسالة</b></td><td class="en">Send us a message</td><td>تحتاج استفسار: عزيمة، مجموعة، عرض <span class="job-dots"><i class="j-scale"></i><i class="j-occasion"></i></span></td></tr>
+            <tr><td><b>احجز</b></td><td class="en">Reserve</td><td>تتكلم عن الصالة والتجمعات <span class="job-dots"><i class="j-experience"></i><i class="j-scale"></i></span></td></tr>
+            <tr><td><b>جيب العائلة</b></td><td class="en">Bring the family</td><td>عشا، عطلة، لمّة <span class="job-dots"><i class="j-experience"></i><i class="j-occasion"></i></span></td></tr>
+            <tr><td><b>احفظ الرقم</b></td><td class="en">Save the number</td><td>غدا الدوام — طلب يتكرر <span class="job-dots"><i class="j-occasion"></i><i class="j-conversion"></i></span></td></tr>
+            <tr><td><b>تعال الليلة</b></td><td class="en">Visit tonight</td><td>تجربة المسا والأجواء <span class="job-dots"><i class="j-experience"></i></span></td></tr>
+            <tr><td><b>تواصل ويانا</b></td><td class="en">Contact us</td><td>ثقة وخدمة، أو سؤال عام <span class="job-dots"><i class="j-trust"></i></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="caption">الصياغة العربية أمثلة — الكاتب يختار كلماته.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     10 — VISUAL & PRODUCTION
+     ========================================================= -->
+<section class="chapter chapter--dark" id="ch10" data-ch="10" data-title="التصوير والإنتاج">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.10</span><span>VISUAL &amp; PRODUCTION</span><span>TC 00:10:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">10</div>
+      <h2 class="ch-title">شنو لازم الكاميرا تلزم</h2>
+      <p class="ch-lede">المطعم فاتحلنا: الصالة، المطبخ، التحضير، الفريق، الخدمة، والطبخ. نستغلها كلها.</p>
+    </header>
+
+    <p class="mega mega--dark reveal">لازم المشاهد <span class="mega-accent">يشم الريحة</span> من الشاشة.</p>
+
+    <div class="texture reveal" aria-label="الملمس المطلوب">
+      <span class="label en">PRIORITIZE REAL FOOD TEXTURE</span>
+      <ul class="texture-wall">
+        <li><b>بخار</b><span class="en">STEAM</span></li>
+        <li><b>فحم</b><span class="en">CHARCOAL</span></li>
+        <li><b>نار</b><span class="en">FIRE</span></li>
+        <li class="is-hot"><b>خبز حار</b><span class="en">FRESH BREAD</span></li>
+        <li><b>ملمس اللحم</b><span class="en">MEAT TEXTURE</span></li>
+        <li><b>تمن</b><span class="en">RICE</span></li>
+        <li><b>مرق وصوصات</b><span class="en">SAUCES</span></li>
+        <li><b>إيدين</b><span class="en">HANDS</span></li>
+        <li><b>تقديم</b><span class="en">SERVING</span></li>
+        <li><b>تقطيع</b><span class="en">CUTTING</span></li>
+        <li><b>شيل الصحون</b><span class="en">CARRYING</span></li>
+        <li><b>طاولة تتعبى</b><span class="en">TABLE FILLING</span></li>
+        <li><b>أكل مشترك</b><span class="en">SHARED FOOD</span></li>
+        <li><b>حركة المطبخ</b><span class="en">KITCHEN MOVEMENT</span></li>
+      </ul>
+      <div class="feel">
+        <p><s class="nope">كل لقطة مثالية ومعقّمة</s> — هذا أكل عراقي. لازم يحس:</p>
+        <ul class="tone-words tone-words--hot"><li>حار</li><li>طازج</li><li>كريم</li><li>حقيقي</li><li>غني</li><li>ملموس</li></ul>
+      </div>
+    </div>
+
+    <!-- Shooting principle -->
+    <div class="principle reveal">
+      <span class="label en">SHOOTING PRINCIPLE</span>
+      <p class="principle-big">صوّروا أكثر من اللي يحتاجه السكربت.</p>
+      <p>يوم التصوير يبني <strong>مكتبة لقطات</strong> نرجعلها كل شهر — مو بس يخلّص فيديوهات اليوم.</p>
+    </div>
+
+    <!-- Contact sheet: shot matrix per category (built by script.js from SHOT_LIST) -->
+    <div class="contact reveal">
+      <div class="contact-head">
+        <div>
+          <span class="label en">CONTACT SHEET — PER FOOD CATEGORY</span>
+          <p>لكل صنف مهم: هاي اللقطات. علّم اللي تصوّر — يبقى محفوظ على جهازك.</p>
+        </div>
+        <div class="contact-meta">
+          <span class="en contact-count" id="shot-count">0 / 0</span>
+          <button type="button" class="btn-ghost" id="shot-reset">صفّر</button>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table class="shot-table" id="shot-table"></table>
+      </div>
+      <p class="caption en">FILE NAMING → SK_{CATEGORY}_{SHOT}_{##} · e.g. SK_KEBAB_MACRO_03.mov</p>
+      <p class="caption">* <span class="en">Packaging / Delivery</span> بس إذا الصنف ينطلب توصيل.</p>
+    </div>
+
+    <!-- B-roll library -->
+    <div class="broll reveal">
+      <span class="label en">B-ROLL LIBRARY</span>
+      <ol class="broll-list">
+        <li><span class="en">B01</span>الواجهة من برّه</li>
+        <li><span class="en">B02</span>المدخل</li>
+        <li><span class="en">B03</span>الطاولات</li>
+        <li><span class="en">B04</span>حجم الصالة</li>
+        <li><span class="en">B05</span>المطبخ</li>
+        <li><span class="en">B06</span>النار</li>
+        <li><span class="en">B07</span>الخبز</li>
+        <li><span class="en">B08</span>الكرسونات</li>
+        <li><span class="en">B09</span>طلبات طالعة</li>
+        <li><span class="en">B10</span>التغليف</li>
+        <li><span class="en">B11</span>زبائن داخلين</li>
+        <li><span class="en">B12</span>طاولات عوائل</li>
+        <li><span class="en">B13</span>حجوزات وطاولات مجهزة</li>
+        <li><span class="en">B14</span>المطعم وقت الزحمة</li>
+      </ol>
+    </div>
+
+    <!-- People -->
+    <div class="people reveal">
+      <div class="people-col">
+        <span class="label en">PEOPLE IN CONTENT</span>
+        <p class="people-big">سيد كاظم نفسه <strong>مو</strong> وجه البراند.</p>
+        <p>بس الـ <span class="en">captains</span>، الكرسونات، فريق المطبخ، وموظفين المطعم ممكن يطلعون — وهاي فرصة نأنسن المطعم.</p>
+      </div>
+      <div class="people-col">
+        <span class="label en">USE STAFF WHEN THEY STRENGTHEN</span>
+        <ul class="chips chips--dark">
+          <li class="chip">الخدمة</li><li class="chip">الضيافة</li><li class="chip">التحضير</li><li class="chip">التجربة</li><li class="chip">القصة</li><li class="chip">الحقيقة</li>
+        </ul>
+        <p class="caption"><s class="nope">نحوّل الموظفين لـ influencers</s> — لا. والـ <span class="en">Models</span> نستخدمهم بس إذا الفكرة تحتاجهم.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     11 — DESIGN & EDITING
+     ========================================================= -->
+<section class="chapter" id="ch11" data-ch="11" data-title="التصميم والمونتاج">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.11</span><span>DESIGN &amp; EDITING</span><span>TC 00:11:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">11</div>
+      <h2 class="ch-title">شلون لازم يحس المحتوى</h2>
+      <p class="ch-lede">المونتاج يكبّر الشهية والطاقة. التصميم يوضّح ويبيع. الثنين يخدمون الفكرة — مو العكس.</p>
+    </header>
+
+    <!-- EDITING -->
+    <div class="split reveal">
+      <div class="split-a">
+        <span class="label en">EDITING / MOTION</span>
+        <h3 class="h3">المونتاج</h3>
+        <ul class="checks">
+          <li>أول <span class="en">frame</span> قوي — معلومة بصرية فورية</li>
+          <li>ملمس الأكل وحركة</li>
+          <li><span class="en">Sound design</span>: نار، شوي، تقطيع، خبز، تقديم</li>
+          <li>صوت المطعم الطبيعي</li>
+          <li>إيقاع سريع بس مقروء</li>
+          <li><span class="en">Speed ramps</span> محسوبة وين ما تفيد</li>
+          <li><span class="en">Close-ups</span> وقطع على الحركة الجسدية</li>
+        </ul>
+      </div>
+      <div class="split-b">
+        <span class="label en">EDIT MODE — THE IDEA DECIDES</span>
+        <div class="mode-scale" role="img" aria-label="مقياس أسلوب المونتاج من سريع وبيعي إلى دافي وسينمائي">
+          <div class="mode-bar"></div>
+          <div class="mode-ends">
+            <div><b class="en">FAST / SALES</b><span>سريع وبيعي</span></div>
+            <div><b class="en">WARM / CINEMATIC</b><span>دافي، ملاحظ، إنساني</span></div>
+          </div>
+          <ul class="mode-jobs">
+            <li style="--pos: 6%"><i class="dot j-performance"></i><span class="en">PERFORMANCE</span></li>
+            <li style="--pos: 20%"><i class="dot j-conversion"></i><span class="en">CONVERSION</span></li>
+            <li style="--pos: 34%"><i class="dot j-demand"></i><span class="en">DEMAND</span></li>
+            <li style="--pos: 48%"><i class="dot j-product"></i><span class="en">PRODUCT</span></li>
+            <li style="--pos: 62%"><i class="dot j-occasion"></i><span class="en">OCCASION</span></li>
+            <li style="--pos: 76%"><i class="dot j-trust"></i><span class="en">TRUST</span></li>
+            <li style="--pos: 90%"><i class="dot j-experience"></i><span class="en">EXPERIENCE</span></li>
+          </ul>
+        </div>
+        <p class="caption"><s class="nope">كل Reel مونتاج TikTok عنيف</s> — لا. الأسلوب يخدم الفكرة.</p>
+      </div>
+    </div>
+
+    <!-- Sales reel anatomy -->
+    <figure class="reel-anatomy reveal">
+      <span class="label en">ANATOMY — SALES REEL (EXAMPLE, ~15s)</span>
+      <ol class="ra">
+        <li style="--w: 8"><span class="en ra-tc">00:00–00:01</span><b class="en">HOOK FRAME</b><span>أقوى لقطة أكل أو موقف. بدون مقدمات، بدون لوغو.</span></li>
+        <li style="--w: 20"><span class="en ra-tc">00:01–00:04</span><b class="en">TEXTURE</b><span>بخار، فحم، تقطيع — بالصوت الطبيعي.</span></li>
+        <li style="--w: 46"><span class="en ra-tc">00:04–00:11</span><b class="en">PRODUCT / STORY</b><span>شنو الطبق، لمنو، وليش هسه.</span></li>
+        <li style="--w: 26"><span class="en ra-tc">00:11–00:15</span><b class="en">CTA + ID</b><span>اسم سيد كاظم، طريقة الطلب، <span class="en">CTA</span> واحد.</span></li>
+      </ol>
+      <figcaption class="caption">المدد تقريبية. الـ <span class="en">Reel</span> الدافي أو السينمائي يمشي بإيقاع مختلف.</figcaption>
+    </figure>
+
+    <!-- DESIGN -->
+    <div class="design reveal">
+      <div class="design-rule">
+        <span class="label en">DESIGN DIRECTION</span>
+        <p class="design-big"><span class="en">LAQTA</span> هي الوكالة.<br><strong>سيد كاظم هو البراند.</strong></p>
+        <p>ما نفرض هوية لقطة على محتوى العميل. المصممين يبنون نظام بصري للمطعم نفسه — من هويته الحقيقية ومكانه — بس بمستوى جودة لقطة.</p>
+        <ol class="prio-list">
+          <li>تصوير الأكل أولاً</li>
+          <li><span class="en">Hierarchy</span> قوية</li>
+          <li>عروض واضحة</li>
+          <li>خط واضح ومقروء</li>
+          <li><span class="en">Mobile-first</span></li>
+          <li>المنتج يسيطر</li>
+          <li>أقل زخرفة ممكنة</li>
+          <li>عناصر براند ثابتة</li>
+        </ol>
+        <p class="note note--inline"><span class="en">PAID →</span> الوضوح والتحويل قبل الزخرفة. دائماً.</p>
+      </div>
+
+      <!-- Post wireframe -->
+      <figure class="wire">
+        <svg viewBox="0 0 400 500" role="img" aria-labelledby="wire-t">
+          <title id="wire-t">هيكل منشور 4:5: المنتج، العنوان، الفائدة، CTA، الهوية</title>
+          <rect x="1" y="1" width="398" height="498" class="w-frame"/>
+          <rect x="20" y="20" width="360" height="290" class="w-food"/>
+          <path d="M20 20 L380 310 M380 20 L20 310" class="w-x"/>
+          <text x="200" y="170" class="w-label" text-anchor="middle">① FOOD — 60%+</text>
+          <rect x="20" y="326" width="300" height="34" class="w-block w-block--strong"/>
+          <text x="30" y="348" class="w-small">② HEADLINE — ONE IDEA</text>
+          <rect x="20" y="370" width="220" height="18" class="w-block"/>
+          <text x="30" y="383" class="w-tiny">③ BENEFIT / OFFER (IF APPROVED)</text>
+          <rect x="20" y="420" width="170" height="48" class="w-cta"/>
+          <text x="105" y="449" class="w-cta-t" text-anchor="middle">④ CTA + CHANNEL</text>
+          <rect x="300" y="420" width="80" height="48" class="w-block"/>
+          <text x="340" y="449" class="w-tiny" text-anchor="middle">⑤ ID</text>
+          <!-- crop marks -->
+          <path d="M-0 30 V0 H30 M370 0 H400 V30 M400 470 V500 H370 M30 500 H0 V470" class="w-crop"/>
+        </svg>
+        <figcaption class="caption">هيكل منشور <span class="en">4:5</span>. العين تمشي: الأكل ← الفكرة ← الفائدة ← الفعل.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     12 — PAID CREATIVE
+     ========================================================= -->
+<section class="chapter" id="ch12" data-ch="12" data-title="الإعلانات">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.12</span><span>PAID CREATIVE</span><span>TC 00:12:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">12</div>
+      <h2 class="ch-title">الإعلان يتولد بالـ <span class="en">brief</span>، مو بعد النشر</h2>
+      <p class="ch-lede">الـ <span class="en">Paid</span> يبدي من اليوم الأول. يعني بعض القطع تنكتب وتتصوّر وتتمنتج كإعلان من البداية. <s class="nope">Boost</s> لأي شي نجح <span class="en">organic</span> مو استراتيجية.</p>
+    </header>
+
+    <div class="anatomy reveal">
+      <span class="label en">EVERY PERFORMANCE CREATIVE MUST CARRY</span>
+      <ol class="anatomy-list">
+        <li><span class="en">01</span><b>المنتج</b><small class="en">PRODUCT</small></li>
+        <li><span class="en">02</span><b>الفائدة</b><small class="en">BENEFIT</small></li>
+        <li><span class="en">03</span><b>المناسبة</b><small class="en">OCCASION</small></li>
+        <li><span class="en">04</span><b>العرض</b><small class="en">OFFER — IF AVAILABLE</small></li>
+        <li><span class="en">05</span><b>الفعل</b><small class="en">CTA</small></li>
+        <li><span class="en">06</span><b>هوية المطعم</b><small class="en">IDENTITY</small></li>
+      </ol>
+    </div>
+
+    <div class="angles-head reveal">
+      <span class="label en">7 ANGLES TO TEST</span>
+      <p><strong>ما نفترض منو يربح.</strong> ننتج، نختبر، ونتعلم. الـ <span class="en">hook</span> تحت اتجاه للفكرة، مو نص نهائي.</p>
+    </div>
+    <div class="angles reveal">
+      <article class="angle"><span class="en angle-n">A1</span><b class="en">PRODUCT</b><h3>الأكل نفسه</h3><p class="hook">الطبق يملّي الشاشة من أول <span class="en">frame</span>. بلا مقدمة.</p></article>
+      <article class="angle"><span class="en angle-n">A2</span><b class="en">QUANTITY</b><h3>الكمية</h3><p class="hook">الصينية تنحط، والكاميرا ترجع لورا حتى يبين حجمها.</p></article>
+      <article class="angle"><span class="en angle-n">A3</span><b class="en">FAMILY</b><h3>العائلة</h3><p class="hook">الكل بالبيت، وكل واحد يريد شي. طلب واحد يرضيهم.</p></article>
+      <article class="angle"><span class="en angle-n">A4</span><b class="en">LUNCH</b><h3>الغدا</h3><p class="hook">الساعة وحدة بالدائرة، ونقاش <q>شناكل اليوم؟</q> بدا.</p></article>
+      <article class="angle"><span class="en angle-n">A5</span><b class="en">DELIVERY</b><h3>التوصيل</h3><p class="hook">الباب يندگ. الأكل واصل وبعده حار.</p></article>
+      <article class="angle"><span class="en angle-n">A6</span><b class="en">OCCASION</b><h3>المناسبة</h3><p class="hook">العزيمة صارت مسؤوليتك. الأكل لا يصير همّك.</p></article>
+      <article class="angle"><span class="en angle-n">A7</span><b class="en">VARIETY</b><h3>التنوع</h3><p class="hook">واحد يريد كباب، واحد سمك، والصغار كنتاكي.</p></article>
+    </div>
+
+    <!-- Test logic -->
+    <div class="testlogic reveal">
+      <span class="label en">TEST LOGIC — CHANGE ONE THING AT A TIME</span>
+      <div class="tl-grid">
+        <div class="tl">
+          <b>اختبار الـ <span class="en">angle</span></b>
+          <p>نفس الطبق، <span class="en">angles</span> مختلفة.</p>
+          <div class="tl-row"><span class="tl-fixed">طبق <em class="tag tag--tbc en">TBC</em></span><span class="tl-var en">A2</span><span class="tl-var en">A4</span><span class="tl-var en">A5</span></div>
+        </div>
+        <div class="tl">
+          <b>اختبار الطبق</b>
+          <p>نفس الـ <span class="en">angle</span>، أطباق مختلفة.</p>
+          <div class="tl-row"><span class="tl-fixed en">A5 DELIVERY</span><span class="tl-var">طبق ١</span><span class="tl-var">طبق ٢</span><span class="tl-var">طبق ٣</span></div>
+        </div>
+        <div class="tl">
+          <b>اختبار الـ <span class="en">hook</span></b>
+          <p>نفس الفيديو، أول ثانيتين مختلفة.</p>
+          <div class="tl-row"><span class="tl-fixed">نفس الـ <span class="en">Reel</span></span><span class="tl-var en">H1</span><span class="tl-var en">H2</span><span class="tl-var en">H3</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="split reveal">
+      <div class="split-a">
+        <span class="label en">WHAT THIS MEANS FOR PRODUCTION</span>
+        <ul class="checks">
+          <li>صوّروا <span class="en">9:16</span> وخلّوا <span class="en">safe zones</span> لواجهة المنصة</li>
+          <li>لكل <span class="en">Paid Reel</span>: 3 <span class="en">opening frames</span> مختلفة على الأقل</li>
+          <li>لقطة منتج نظيفة بيها مساحة للنص</li>
+          <li>نسخة بيها ناس ونسخة بدون</li>
+          <li>تغليف وطلبات طالعة للـ <span class="en">Delivery angle</span></li>
+          <li><span class="en">Export</span>: <span dir="ltr">9:16 + 4:5 + 1:1</span></li>
+        </ul>
+      </div>
+      <!-- Offers -->
+      <aside class="split-b offers">
+        <div class="offers-head">
+          <span class="label en">OFFERS</span>
+          <span class="status en">STATUS: NOT FINALIZED</span>
+        </div>
+        <p class="offers-big">لا تخترعون خصم.</p>
+        <p>العروض تندرس ويا العميل. نستكشف فرص مثل:</p>
+        <ul class="chips">
+          <li class="chip">كومبو غدا</li><li class="chip">وجبات موظفين</li><li class="chip">وجبات عائلية</li><li class="chip">باقات</li><li class="chip">وجبات مجموعات</li><li class="chip">باقات مناسبات</li><li class="chip">حوافز توصيل</li><li class="chip">تفعيل يوم معيّن</li>
+        </ul>
+        <p class="caption"><strong>أي سعر أو آلية عرض لازم يوافق عليها العميل.</strong></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     13 — BEFORE MONTH ONE
+     ========================================================= -->
+<section class="chapter chapter--white chapter--bmo" id="ch13" data-ch="13" data-title="قبل الشهر الأول">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.13</span><span>BEFORE MONTH ONE</span><span>TC 00:13:00:00</span></div>
+      <p class="bmo-mega en" aria-hidden="true">BEFORE<br>MONTH ONE</p>
+      <h2 class="ch-title">قبل الشهر الأول</h2>
+      <p class="ch-lede"><strong>ممنوع الفريق يخمّن هاي الأجوبة.</strong> كل سؤال هنا يأثر على قرار إبداعي. الـ <span class="en">Account</span> يجيبها من العميل قبل ما نقفل أول <span class="en">content calendar</span>.</p>
+    </header>
+
+    <div class="bmo-status reveal">
+      <div class="bmo-meter" aria-hidden="true"><span id="bmo-bar"></span></div>
+      <p><span class="en bmo-count" id="bmo-count">0 / 0</span> جواب وصل <button type="button" class="btn-ghost" id="bmo-toggle">افتح الكل</button> <button type="button" class="btn-ghost" id="bmo-reset">صفّر</button></p>
+    </div>
+
+    <div class="bmo" id="bmo">
+      <details class="bmo-group" open>
+        <summary><span class="en bmo-n">A</span><b class="en">PRODUCT</b><span>المنتج</span><span class="en bmo-gc" data-count></span></summary>
+        <ul>
+          <li><label><input type="checkbox" id="q-p1"><span>شنو الـ <span class="en">Hero dishes</span>؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p2"><span>شنو الأكثر مبيعاً؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p3"><span>أي أطباق هامشها أعلى؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p4"><span>أي أطباق تريدون تبيعون منها أكثر؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p5"><span>أي أصناف أداؤها ضعيف؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p6"><span>أي أطباق تمثل سيد كاظم أكثر شي؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p7"><span>أي أطباق تناسب الإعلان المدفوع؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p8"><span>أي أطباق تنفع للتوصيل (توصل زينة)؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p9"><span>أي وجبات أقوى للعوائل؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p10"><span>أي وجبات أقوى للمجاميع والمناسبات؟</span></label></li>
+          <li><label><input type="checkbox" id="q-p11"><span>شنو الأصناف ذات الأولوية؟</span></label></li>
+        </ul>
+      </details>
+      <details class="bmo-group" open>
+        <summary><span class="en bmo-n">B</span><b class="en">OFFERS</b><span>العروض</span><span class="en bmo-gc" data-count></span></summary>
+        <ul>
+          <li><label><input type="checkbox" id="q-o1"><span>نسوي باقات (<span class="en">bundles</span>)؟</span></label></li>
+          <li><label><input type="checkbox" id="q-o2"><span>وجبات عائلية؟</span></label></li>
+          <li><label><input type="checkbox" id="q-o3"><span>عروض غدا؟</span></label></li>
+          <li><label><input type="checkbox" id="q-o4"><span>عروض للموظفين؟</span></label></li>
+          <li><label><input type="checkbox" id="q-o5"><span>باقات مناسبات؟</span></label></li>
+          <li><label><input type="checkbox" id="q-o6"><span>حوافز توصيل؟</span></label></li>
+        </ul>
+      </details>
+      <details class="bmo-group">
+        <summary><span class="en bmo-n">C</span><b class="en">OPERATIONS</b><span>التشغيل</span><span class="en bmo-gc" data-count></span></summary>
+        <ul>
+          <li><label><input type="checkbox" id="q-op1"><span>معدل وقت التوصيل؟</span></label></li>
+          <li><label><input type="checkbox" id="q-op2"><span>أجور التوصيل؟</span></label></li>
+          <li><label><input type="checkbox" id="q-op3"><span>مناطق التوصيل؟</span></label></li>
+          <li><label><input type="checkbox" id="q-op4"><span>أقصى طاقة للمطبخ وقت الذروة؟</span></label></li>
+          <li><label><input type="checkbox" id="q-op5"><span>وين تتعطل الطلبات (<span class="en">bottlenecks</span>)؟</span></label></li>
+          <li><label><input type="checkbox" id="q-op6"><span>شلون نعرف مصدر الطلب (إعلان / صفحة / رقم)؟ <em class="tag en">LAQTA ADD</em></span></label></li>
+        </ul>
+      </details>
+      <details class="bmo-group">
+        <summary><span class="en bmo-n">D</span><b class="en">CUSTOMER</b><span>الزبون</span><span class="en bmo-gc" data-count></span></summary>
+        <ul>
+          <li><label><input type="checkbox" id="q-c1"><span>شنو أكثر طلب عائلي شائع؟</span></label></li>
+          <li><label><input type="checkbox" id="q-c2"><span>شنو أكثر طلب غدا شائع؟</span></label></li>
+          <li><label><input type="checkbox" id="q-c3"><span>شكد حجم المجموعة المعتاد؟</span></label></li>
+          <li><label><input type="checkbox" id="q-c4"><span>أكثر نوع حجز يتكرر؟</span></label></li>
+        </ul>
+      </details>
+      <details class="bmo-group">
+        <summary><span class="en bmo-n">E</span><b class="en">BUSINESS</b><span>البزنس</span><span class="en bmo-gc" data-count></span></summary>
+        <ul>
+          <li><label><input type="checkbox" id="q-b1"><span>أي أيام تحتاج طلب أكثر؟</span></label></li>
+          <li><label><input type="checkbox" id="q-b2"><span>أي ساعات تحتاج طلب أكثر؟</span></label></li>
+          <li><label><input type="checkbox" id="q-b3"><span>شنو الضعيف هسه؟</span></label></li>
+          <li><label><input type="checkbox" id="q-b4"><span>شنو تريدون نبيع أول؟</span></label></li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Priority hierarchy: output of the answers -->
+    <div class="hier reveal">
+      <div class="hier-text">
+        <span class="label en">OUTPUT → PRODUCT PRIORITY HIERARCHY</span>
+        <p>الأجوبة تتحول لترتيب واضح. هذا الترتيب يقرر شنو ينصوّر أول، وشنو يروح للإعلان.</p>
+      </div>
+      <ol class="hier-stack">
+        <li class="h1"><b class="en">HERO</b><span>1–2 طبق: الأكثر مبيعاً + يمثل سيد كاظم</span><em class="tag tag--tbc en">TBC</em></li>
+        <li class="h2"><b class="en">SUPPORT</b><span>هامش أعلى / يوصل زين / قوي للعوائل</span><em class="tag tag--tbc en">TBC</em></li>
+        <li class="h3"><b class="en">ROTATION</b><span>التنوع: يدوّر بين الأشهر</span><em class="tag tag--tbc en">TBC</em></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     14 — WHO OWNS WHAT?
+     ========================================================= -->
+<section class="chapter" id="ch14" data-ch="14" data-title="منو يملك شنو؟">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.14</span><span>WHO OWNS WHAT?</span><span>TC 00:14:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">14</div>
+      <h2 class="ch-title">منو يملك شنو؟</h2>
+      <p class="ch-lede">كل قسم يعرف شنو مسؤوليته، وشنو السؤال اللي لازم يسأله كل مرة.</p>
+    </header>
+
+    <div class="roles reveal">
+      <article class="role">
+        <span class="label en">COPYWRITER</span>
+        <h3>الكاتب</h3>
+        <ul><li>موقف الجمهور</li><li><span class="en">Hooks</span></li><li><span class="en">Scripts</span></li><li><span class="en">Captions</span></li><li>زاوية الرسالة</li><li>منطق الـ <span class="en">CTA</span></li><li>قصة المنتج</li><li>لغة البيع</li></ul>
+        <p class="role-q">بأي موقف هسه هذا الشخص؟</p>
+      </article>
+      <article class="role">
+        <span class="label en">CREATIVE DIRECTION</span>
+        <h3>الإدارة الإبداعية</h3>
+        <ul><li>الأفكار الأساسية</li><li>توازن الشهر</li><li>أفكار الحملات</li><li>ترجمة الاستراتيجية لتنفيذ</li><li>تماسك النظام</li></ul>
+        <p class="role-q">هاي القطعة شنو شغلها بالشهر؟</p>
+      </article>
+      <article class="role">
+        <span class="label en">ART DIRECTION / DESIGN</span>
+        <h3>التصميم</h3>
+        <ul><li>التواصل البصري</li><li><span class="en">Hierarchy</span></li><li><span class="en">Typography</span></li><li>المعالجة الغرافيكية</li><li>المحتوى الثابت</li><li>نسخ الإعلانات</li></ul>
+        <p class="role-q">شنو أول شي تشوفه العين؟</p>
+      </article>
+      <article class="role">
+        <span class="label en">PHOTO / VIDEO</span>
+        <h3>التصوير</h3>
+        <ul><li>الشهية</li><li>حقيقة الأكل</li><li>اللحظات الإنسانية</li><li>حجم المطعم</li><li>مكتبة اللقطات</li><li>دقة المنتج</li></ul>
+        <p class="role-q">صوّرت أكثر من اللي يحتاجه السكربت؟</p>
+      </article>
+      <article class="role">
+        <span class="label en">EDITING / MOTION</span>
+        <h3>المونتاج</h3>
+        <ul><li>الإيقاع</li><li>الانتباه</li><li>تأثير الأكل</li><li>الصوت</li><li>وضوح القصة</li><li><span class="en">Retention</span></li></ul>
+        <p class="role-q">ليش المشاهد يكمل للثانية الثالثة؟</p>
+      </article>
+      <article class="role role--feedback">
+        <span class="label en">MEDIA BUYING</span>
+        <h3>الإعلانات</h3>
+        <p class="role-feeds">يرجّع للفريق كل شهر:</p>
+        <ul><li>أي <span class="en">angle</span> اشتغل؟</li><li>أي طبق اشتغل؟</li><li>أي <span class="en">hook</span> اشتغل؟</li><li>أي جمهور تفاعل؟</li><li>أي <span class="en">CTA</span> حوّل؟</li></ul>
+        <p class="role-q">شنو نغيّر الشهر الجاي؟</p>
+      </article>
+    </div>
+
+    <div class="mgmt reveal">
+      <span class="label en">MANAGEMENT / ACCOUNT</span>
+      <p>يجيب أجوبة <a href="#ch13">قبل الشهر الأول</a>، ياخذ موافقة العميل على أي عرض أو سعر، ويحمي الفريق من التخمين.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     15 — THE LOOP
+     ========================================================= -->
+<section class="chapter" id="ch15" data-ch="15" data-title="الدورة">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.15</span><span>THE LOOP</span><span>TC 00:15:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">15</div>
+      <h2 class="ch-title">دورة وحدة. مو أقسام منفصلة.</h2>
+      <p class="ch-lede">أرقام كل شهر تحسّن الشهر اللي بعده. اضغط أي مرحلة.</p>
+    </header>
+
+    <div class="loop reveal">
+      <figure class="loop-fig">
+        <svg viewBox="-120 -20 740 560" class="loop-svg" id="loop-svg" role="group" aria-label="دورة العمل: من الاستراتيجية للتعلم">
+          <defs>
+            <linearGradient id="spec" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#F13A34"/>
+              <stop offset=".25" stop-color="#F2762E"/>
+              <stop offset=".45" stop-color="#E9B81F"/>
+              <stop offset=".6" stop-color="#3BA776"/>
+              <stop offset=".75" stop-color="#2F9BC1"/>
+              <stop offset="1" stop-color="#7A4FD1"/>
+            </linearGradient>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" class="loop-arrow"/>
+            </marker>
+          </defs>
+          <!-- arcs between steps (clockwise) -->
+          <g class="loop-arcs" fill="none" stroke="url(#spec)" stroke-width="2.5" marker-end="url(#arrow)">
+            <path d="M276.4 61.8 A190 190 0 0 1 364.3 98.3"/>
+            <path d="M401.7 135.7 A190 190 0 0 1 438.2 223.6"/>
+            <path d="M438.2 276.4 A190 190 0 0 1 401.7 364.3"/>
+            <path d="M364.3 401.7 A190 190 0 0 1 276.4 438.2"/>
+            <path d="M223.6 438.2 A190 190 0 0 1 135.7 401.7"/>
+            <path d="M98.3 364.3 A190 190 0 0 1 61.8 276.4"/>
+            <path d="M61.8 223.6 A190 190 0 0 1 98.3 135.7"/>
+            <path d="M135.7 98.3 A190 190 0 0 1 223.6 61.8"/>
+          </g>
+          <!-- center -->
+          <text x="250" y="232" text-anchor="middle" class="loop-center-en">MONTH N → N+1</text>
+          <text x="250" y="266" text-anchor="middle" class="loop-center-ar">كل شهر أذكى من اللي قبله</text>
+          <!-- nodes -->
+          <g class="loop-node is-active" data-step="1" tabindex="0" role="button" aria-label="STRATEGY — الاستراتيجية">
+            <circle cx="250" cy="60" r="14"/><text x="250" y="65" text-anchor="middle" class="loop-n">1</text>
+            <text x="250" y="18" text-anchor="middle" class="loop-en">STRATEGY</text>
+            <text x="250" y="-2" text-anchor="middle" class="loop-ar">الاستراتيجية</text>
+          </g>
+          <g class="loop-node" data-step="2" tabindex="0" role="button" aria-label="IDEA — الفكرة">
+            <circle cx="384.4" cy="115.6" r="14"/><text x="384.4" y="120.6" text-anchor="middle" class="loop-n">2</text>
+            <text x="410" y="84" text-anchor="start" class="loop-en">IDEA</text>
+            <text x="410" y="66" text-anchor="start" class="loop-ar">الفكرة</text>
+          </g>
+          <g class="loop-node" data-step="3" tabindex="0" role="button" aria-label="COPY — الكتابة">
+            <circle cx="440" cy="250" r="14"/><text x="440" y="255" text-anchor="middle" class="loop-n">3</text>
+            <text x="468" y="262" text-anchor="start" class="loop-en">COPY</text>
+            <text x="468" y="242" text-anchor="start" class="loop-ar">الكتابة</text>
+          </g>
+          <g class="loop-node" data-step="4" tabindex="0" role="button" aria-label="PRODUCTION — الإنتاج">
+            <circle cx="384.4" cy="384.4" r="14"/><text x="384.4" y="389.4" text-anchor="middle" class="loop-n">4</text>
+            <text x="410" y="432" text-anchor="start" class="loop-en">PRODUCTION</text>
+            <text x="410" y="414" text-anchor="start" class="loop-ar">الإنتاج</text>
+          </g>
+          <g class="loop-node" data-step="5" tabindex="0" role="button" aria-label="EDIT / DESIGN — المونتاج والتصميم">
+            <circle cx="250" cy="440" r="14"/><text x="250" y="445" text-anchor="middle" class="loop-n">5</text>
+            <text x="250" y="486" text-anchor="middle" class="loop-en">EDIT / DESIGN</text>
+            <text x="250" y="508" text-anchor="middle" class="loop-ar">المونتاج والتصميم</text>
+          </g>
+          <g class="loop-node" data-step="6" tabindex="0" role="button" aria-label="PUBLISH / ADS — النشر والإعلان">
+            <circle cx="115.6" cy="384.4" r="14"/><text x="115.6" y="389.4" text-anchor="middle" class="loop-n">6</text>
+            <text x="90" y="432" text-anchor="end" class="loop-en">PUBLISH / ADS</text>
+            <text x="90" y="414" text-anchor="end" class="loop-ar">النشر والإعلان</text>
+          </g>
+          <g class="loop-node" data-step="7" tabindex="0" role="button" aria-label="RESULTS — النتائج">
+            <circle cx="60" cy="250" r="14"/><text x="60" y="255" text-anchor="middle" class="loop-n">7</text>
+            <text x="32" y="262" text-anchor="end" class="loop-en">RESULTS</text>
+            <text x="32" y="242" text-anchor="end" class="loop-ar">النتائج</text>
+          </g>
+          <g class="loop-node" data-step="8" tabindex="0" role="button" aria-label="LEARNING — التعلم">
+            <circle cx="115.6" cy="115.6" r="14"/><text x="115.6" y="120.6" text-anchor="middle" class="loop-n">8</text>
+            <text x="90" y="84" text-anchor="end" class="loop-en">LEARNING</text>
+            <text x="90" y="66" text-anchor="end" class="loop-ar">التعلم</text>
+          </g>
+        </svg>
+      </figure>
+
+      <ol class="loop-steps" id="loop-steps">
+        <li class="is-active" data-step="1"><span class="en">1 · STRATEGY</span><b>الاستراتيجية</b><p>أولويات الشهر: أي طبق، أي مناسبة، أي <span class="en">angle</span>.</p><small>CD + Account</small></li>
+        <li data-step="2"><span class="en">2 · IDEA</span><b>الفكرة</b><p>فكرة لكل قطعة من الـ 14 — وشغلها واضح.</p><small>CD + Copy</small></li>
+        <li data-step="3"><span class="en">3 · COPY</span><b>الكتابة</b><p><span class="en">Hooks</span>، <span class="en">scripts</span>، <span class="en">captions</span>، <span class="en">CTA</span>.</p><small>Copywriter</small></li>
+        <li data-step="4"><span class="en">4 · PRODUCTION</span><b>الإنتاج</b><p>لقطات الشهر + إضافة لمكتبة الـ <span class="en">B-roll</span>.</p><small>Photo / Video</small></li>
+        <li data-step="5"><span class="en">5 · EDIT / DESIGN</span><b>المونتاج والتصميم</b><p><span class="en">Reels</span>، <span class="en">posts</span>، ونسخ الإعلان <span dir="ltr">9:16 / 4:5 / 1:1</span>.</p><small>Editors + Designers</small></li>
+        <li data-step="6"><span class="en">6 · PUBLISH / ADS</span><b>النشر والإعلان</b><p>نشر <span class="en">organic</span> + اختبار الـ <span class="en">angles</span>.</p><small>Media Buying + Social</small></li>
+        <li data-step="7"><span class="en">7 · RESULTS</span><b>النتائج</b><p>أي <span class="en">angle</span> / طبق / <span class="en">hook</span> / جمهور / <span class="en">CTA</span> اشتغل.</p><small>Media Buying</small></li>
+        <li data-step="8"><span class="en">8 · LEARNING</span><b>التعلم</b><p>ثلاث قرارات للشهر الجاي: نكمّل، نوقف، نجرّب.</p><small>Everyone</small></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     16 — FINAL FILTER
+     ========================================================= -->
+<section class="chapter chapter--dark chapter--final" id="ch16" data-ch="16" data-title="الفلتر الأخير">
+  <div class="wrap">
+    <header class="ch-head">
+      <div class="ch-strip en"><span>CH.16</span><span>FINAL FILTER</span><span>TC 00:16:00:00</span></div>
+      <div class="ch-num en" aria-hidden="true">16</div>
+      <h2 class="ch-title">الفلتر الأخير</h2>
+      <p class="ch-lede">قبل ما توافق على أي فكرة، مرّرها من هنا. جرّبها على فكرة عندك هسه.</p>
+    </header>
+
+    <div class="filter-test reveal" id="final-filter">
+      <ol class="ff-list">
+        <li data-q="1"><span class="en ff-n">01</span><p>تخلّي أحد يجوع؟</p><div class="ff-btns"><button type="button" data-a="yes">إي</button><button type="button" data-a="no">لا</button></div></li>
+        <li data-q="2"><span class="en ff-n">02</span><p>المشاهد يفتهم شنو نبيع؟</p><div class="ff-btns"><button type="button" data-a="yes">إي</button><button type="button" data-a="no">لا</button></div></li>
+        <li data-q="3"><span class="en ff-n">03</span><p>أكو سبب يختار سيد كاظم؟</p><div class="ff-btns"><button type="button" data-a="yes">إي</button><button type="button" data-a="no">لا</button></div></li>
+        <li data-q="4"><span class="en ff-n">04</span><p>مربوطة بموقف حقيقي عند الزبون؟</p><div class="ff-btns"><button type="button" data-a="yes">إي</button><button type="button" data-a="no">لا</button></div></li>
+        <li data-q="5"><span class="en ff-n">05</span><p>الرسالة واضحة بدون شرح؟</p><div class="ff-btns"><button type="button" data-a="yes">إي</button><button type="button" data-a="no">لا</button></div></li>
+        <li data-q="6"><span class="en ff-n">06</span><p>تخدم هدف البزنس؟</p><div class="ff-btns"><button type="button" data-a="yes">إي</button><button type="button" data-a="no">لا</button></div></li>
+        <li data-q="7"><span class="en ff-n">07</span><p>إذا قطعة بيع: الخطوة الجاية واضحة؟</p><div class="ff-btns"><button type="button" data-a="yes">إي</button><button type="button" data-a="no">لا</button><button type="button" data-a="na">مو قطعة بيع</button></div></li>
+      </ol>
+
+      <div class="ff-verdict" id="ff-verdict" aria-live="polite">
+        <span class="label en" id="ff-label">VERDICT — 0 / 7</span>
+        <p class="ff-big" id="ff-text">جاوب على السبع أسئلة.</p>
+        <button type="button" class="btn-ghost btn-ghost--dark" id="ff-reset">فكرة ثانية</button>
+      </div>
+    </div>
+
+    <p class="closing reveal">إذا الجواب <span class="closing-no">لا</span>:<br>نعيد الفكرة.</p>
+
+    <footer class="endcard en">
+      <span><i class="rec-dot rec-dot--still" aria-hidden="true"></i>END OF FILE — SK_BRIEF_v1.0</span>
+      <span>LAQTA <span class="ar">لقطة</span> — INTERNAL</span>
+      <span class="kbd-hint">J / K — NEXT / PREV CHAPTER</span>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
